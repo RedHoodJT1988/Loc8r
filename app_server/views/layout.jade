@@ -3,11 +3,10 @@ html
   head
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
     title= title
-    link(rel='stylesheet', href='/bootstrap/css/amelia.bootstrap.css')
+    link(rel='stylesheet', href='/bootstrap/css/sketchy.bootstrap.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
-
-    .navbar.navbar-default.navbar-fixed-top
+   .navbar.navbar-default.navbar-fixed-top
       .container
         .navbar-header
           a.navbar-brand(href='/') Loc8r
@@ -15,19 +14,18 @@ html
             span.icon-bar
             span.icon-bar
             span.icon-bar
-        #navbar-main.navbat-collapse.collapse
+        #navbar-main.navbar-collapse.collapse
           ul.nav.navbar-nav
             li
-              a(href='/about') About
+              a(href='/about/') About
+
     .container
       block content
-      .footer
-      .row
-        .col-xs-12
-          small &copy; Jonathan Reeves 2018
+
+      footer
+        .row
+          .col-xs-12
+            small &copy; Jonathan Reeves 2018
 
     script(src='/javascripts/jquery-1.11.1.min.js')
     script(src='/bootstrap/js/bootstrap.min.js')
-
-      
-    
