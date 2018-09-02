@@ -2,17 +2,16 @@ var mongoose = require('mongoose');
 var gracefulShutdown;
 var dbURI = 'mongodb://localhost/Loc8r';
 if (process.env.NODE_ENV === 'production') {
-  dbURI =
-    'mongodb://JonathanReeves:RedHo0dJT@ds141932.mlab.com:41932/heroku_6b5mm5vz';
+  dbURI = process.env.MONGODB_URI;
 }
-mongoose.connect(dbURI);
+mongoose.connect('dbURI');
 
 mongoose.connection.on('connected', function() {
   console.log('Mongoose connected to ' + dbURI);
 });
 
 mongoose.connection.on('error', function() {
-  console.log('Mongoose connection error: ' + err);
+  console.log('Mongoose connection error: ');
 });
 
 mongoose.connection.on('disconnected', function() {
